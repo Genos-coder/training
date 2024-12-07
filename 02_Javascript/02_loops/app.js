@@ -82,3 +82,11 @@ for (let key of Object.keys(student)) {
 //   a++;
 //   console.log(sum);
 // }
+
+//forEach (specific to array only)
+
+const arr4 = [1, 2, 3, 4, 5];
+
+arr4.forEach(function (num, index, array) {
+  console.log(`Number at ${index} is ${num} from this array ${array}`);
+});
