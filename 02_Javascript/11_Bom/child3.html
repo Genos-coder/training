@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="msg-btn">click to say hello to parent</button>
+</body>
+<script>
+    const msgBtn = document.getElementById("msg-btn");
+    msgBtn.addEventListener("click", () => {
+
+        if (window.opener) {
+            window.opener.document.getElementById("child-msg").innerText = "hello from children 3"
+        }
+    })
+</script>
+
+</html>

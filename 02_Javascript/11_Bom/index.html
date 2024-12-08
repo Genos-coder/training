@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM In JS</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <!-- <input id="text"" type=" text"> -->
+    <section>
+        <h2>Using window.open() and close()</h2>
+        <div class="output">
+
+            <button id="openBtn">Open window</button>
+            <button id="closeBtn">Close window</button>
+        </div>
+    </section>
+    <section>
+        <h2>Using window.innerWidth and window.innerHeight (resize window to see changes)</h2>
+        <div class="output">
+
+            <p id="area"></p>
+        </div>
+    </section>
+    <section id="container-dark">
+        <h2>Using window.scrollX and window.scrollY,we can see how much page is scrolling horizontally and
+            vertically (resize window to see changes) see at top left corner</h2>
+        <p id="area2"></p>
+        <div class="output">
+
+            <button id="scroll-y-btn">Click to see scrollX</button>
+        </div>
+    </section>
+    <section>
+        <h2>Below we use iframe tag used to render another html page which has button which toggle parent background
+            color
+        </h2>
+        <div class="output">
+            <!-- <iframe src="./child1.html" frameborder="0"></iframe> -->
+        </div>
+    </section>
+    <section>
+        <h2>
+            We can use to create the new window and use opener to
+            reference that window
+        </h2>
+        <div class="output">
+            <button id="window-open-btn">Click to open child</button>
+        </div>
+    </section>
+    <section>
+        <h2>
+            We can use window.open("./child3.html","","width=200px,height=200px") to create the new window and use
+            opener to
+            reference the parent from that window
+        </h2>
+        <div class="output">
+            <button id="window-open-btn2">Click to open</button>
+            <p id="child-msg"></p>
+        </div>
+    </section>
+    <section>
+        <h2>
+            Outer width and height include all interfaces like toolbar and scrollbar ,etc
+        </h2>
+        <div class="output">
+            <p id="demo"></p>
+        </div>
+    </section>
+</body>
+
+</html>

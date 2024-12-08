@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button id="color-btn">Change Color</button>
+    <pre>
+        const parentColorChanger = document.getElementById("color-btn");
+        let isColor = true;
+        parentColorChanger.addEventListener("click", () => {
+        if (isColor) {
+        window.parent.document.body.style.backgroundColor = "aqua"
+        isColor = false;
+        } else {
+        window.parent.document.body.style.backgroundColor = "white"
+        isColor = true;
+        }
+        })
+    </pre>
+    <p>This above JS does the stuff</p>
+</body>
+<script>
+    const parentColorChanger = document.getElementById("color-btn");
+    let isColor = true;
+    parentColorChanger.addEventListener("click", () => {
+        if (isColor) {
+            window.parent.document.body.style.backgroundColor = "aqua"
+            isColor = false;
+        } else {
+            window.parent.document.body.style.backgroundColor = "white"
+            isColor = true;
+        }
+    })
+</script>
+
+</html>

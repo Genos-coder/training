@@ -1,0 +1,77 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h2 {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  /* width: 100%; */
+}
+
+/* CSS for scrolling container */
+
+#scrolling-container {
+  border: 2px solid black;
+  border-radius: 1rem;
+  position: relative;
+  width: 70%;
+  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  margin: 2rem;
+}
+
+#area2 {
+  position: fixed;
+  top: 1rem;
+  left: 2rem;
+  z-index: 5;
+  background-color: wheat;
+  padding: 1rem;
+  color: black;
+}
+#container-dark {
+  background-color: black;
+  color: white;
+}
+#scroll-y-btn {
+  background-color: black;
+  border: 3px solid purple;
+  font-size: 1.1rem;
+  color: white;
+  padding: 1rem;
+  box-shadow: 0px 0px 10px rgb(227, 59, 143);
+  border-radius: 5px;
+}
+
+#scroll-y-btn:hover {
+  border: 3px solid rgb(195, 0, 195);
+  box-shadow: 0px 0px 15px rgb(227, 59, 143);
+}
+
+iframe {
+  width: 1000px;
+  height: 100%;
+}
