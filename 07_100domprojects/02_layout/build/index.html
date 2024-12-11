@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Using CSS</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="min-h-screen bg-black">
+    <main class="lg:h-screen  w-full p-5 h-full flex max-lg:flex-col  gap-4">
+        <div class="lg:w-1/2 w-full h-[400px] rounded-lg bg-gradient-to-tr from-orange-300 to-pink-900 lg:h-full"></div>
+        <div class="lg:w-1/2 w-full mx-auto flex flex-col gap-4">
+            <div class="bg-white text-black rounded-lg p-4 ">
+                <h2 class="text-3xl font-bold mb-2">The Nature Show</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate fugiat unde illum minus adipisci
+                    iste accusantium cupiditate a amet sed. Cumque consequuntur doloribus qui maxime est quidem
+                    inventore iusto quam?</p>
+            </div>
+            <div class="flex flex-col md:flex-row w-full gap-4 h-full justify-center items-center  flex-1">
+                <div class="bg-gradient-to-tr w-full lg:h-full from-white to-slate-500 h-[400px]  rounded-lg"></div>
+                <div class="bg-gradient-to-tr w-full lg:h-full from-white to-slate-500 h-[400px]  rounded-lg"></div>
+            </div>
+            <form class="bg-white p-4 rounded-lg flex flex-col">
+                <h3 class="font-medium text-xl ">Join Us!</h3>
+                <div class=" sm:flex w-full gap-4 my-4 max-sm:flex-col ">
+                    <div class="flex flex-col w-full">
+                        <label class="font-medium" for="">Name</label>
+                        <input class="bg-slate-200 p-2 rounded-lg" type="text" name="" id="">
+                    </div>
+                    <div class="flex flex-col w-full">
+                        <label class="font-medium" for="">Email</label>
+                        <input class=" bg-slate-200 p-2 rounded-lg" class="flex flex-col" type="text" name="" id="">
+                    </div>
+                </div>
+                <button class="bg-yellow-600 text-center w-full text-white py-[6px] rounded-lg shadow-lg ">I want to be
+                    a part of
+                    it</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
