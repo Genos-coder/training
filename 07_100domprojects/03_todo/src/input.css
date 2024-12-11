@@ -1,0 +1,23 @@
+@tailwind utilities;
+@tailwind components;
+@tailwind base;
+
+@layer components {
+    .btn-custom {
+      @apply bg-green-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-green-600;
+    }
+/*     
+
+    .todo-li-style{
+      @apply bg-white p-3 rounded-l-lg flex justify-between  text-black font-medium border self-start  border-black
+    }
+    .edit-btn{
+      @apply bg-yellow-200 
+    }
+    .del-btn{
+      @apply
+    }
+    .complete-btn{
+      @apply
+    } */
+  }

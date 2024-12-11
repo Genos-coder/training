@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App By Ganesh</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/app.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gradient-to-tr w-full from-slate-900 p-4 to-pink-600 min-h-screen">
+    <section class=" h-full w-full flex  flex-col ">
+        <div class="todo-inputs w-[80%] sm:w-1/2 my-3 mb-20  mx-auto  relative">
+            <form action="" class="bg-white relative z-20 gap-4 rounded-lg p-4 flex w-full flex-col">
+                <input placeholder="Enter your todo" id="todo-text" type="text"
+                    class=" border-black border-2 p-1 text-lg rounded-lg">
+                <button
+                    class="rounded-lg bg-gradient-to-t from-slate-500 text-white py-2 text-xl   font-medium to-pink-600">Add
+                    to Todo</button>
+            </form>
+            <div class="absolute bottom-0 w-full  flex justify-center items-center">
+                <div id="filter-div"
+                    class="absolute top-[-43px] left-[5.50%] w-[90%] border border-black right-0    flex justify-center  items-start bg-white p-2 transition-all duration-500 rounded-b-lg gap-2  z-10">
+                    <button onclick="filterTodo('complete')"
+                        class="hover:bg-pink-600  text-nowrap w-full rounded-sm p-[1px] hover:text-white">Completed</button>
+                    <button onclick="filterTodo('uncompleted')"
+                        class="hover:bg-pink-600  text-nowrap w-full rounded-sm p-[1px] hover:text-white">Uncompleted</button>
+                    <button onclick="filterTodo('all')"
+                        class="hover:bg-pink-600  text-nowrap w-full rounded-sm p-[1px] hover:text-white">All
+                        todos</button>
+                    <button id="filter-slider"
+                        class="absolute     px-[10px] text-red-200   flex flex-col justify-center items-center  rounded-b-md  bottom-[-90%]  "><i
+                            class="fa-solid fa-angle-down shadow-lg font-bold text-xl  animate-pulse"></i>
+                        <i class="fa-solid fa-angle-down shadow-lg font-bold text-xl animate-pulse"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <hr class="w-full md:w-4/5 lg:w-3/4 mx-auto bg-white my-4">
+        <ul id="todo-container"
+            class="flex-1 rounded-lg grid bg-white text-white max-sm:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 p-4 lg:grid-cols-4">
+        </ul>
+    </section>
+</body>
+
+</html>
