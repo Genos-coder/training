@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/app.js" defer></script>
+
+</head>
+
+<body class="h-screen bg-black">
+    <form class="w-full p-4 flex justify-center items-center gap-3 flex-col">
+        <div class="flex justify-center items-center gap-4">
+
+            <input class="rounded-sm p-2 text-3xl" placeholder="" type="text">
+            <div class="flex justify-center  items-center gap-1">
+                <button
+                    class="px-3 py-2 text-3xl rounded-sm text-white bg-green-600 flex justify-center items-center">+</button>
+                <button
+                    class="px-3 py-2 text-3xl rounded-sm text-black  flex justify-center items-center bg-yellow-300 ">-</button>
+            </div>
+        </div>
+        <button class="bg-blue-600 px-5 py-2 rounded-md text-white">submit</button>
+    </form>
+    <div
+        class="output-container grid grid-cols-6  sm:grid-cols-8 lg:grid-cols-10  md:grid-cols-12 grid-rows-5 flex-1 p-2">
+        <div class="number-block "></div>
+    </div>
+</body>
+
+</html>
