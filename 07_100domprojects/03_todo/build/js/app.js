@@ -3,6 +3,9 @@ const form = document.querySelector('form');
 const todoContainer = document.querySelector("#todo-container");
 const filterSlider = document.getElementById("filter-slider");
 const filterDiv = document.getElementById("filter-div");
+const completeBtn = document.getElementById("complete");
+const incompleteBtn = document.getElementById("incomplete");
+const allBtn = document.getElementById("all");
 let filterValue ="";
 filterSlider.addEventListener("click",()=>{
     // console.log("triggered")
@@ -54,14 +57,26 @@ function updateUi(){
     switch(filterValue){
         case "complete":{
             todoArr = todoArr.filter((todo)=>todo.complete)
+            completeBtn.classList.add("bg-pink-600","text-white")
+            
+            incompleteBtn.classList.remove("bg-pink-600","text-white")
+            allBtn.classList.remove("bg-pink-600","text-white")
             break;
         }
         case "uncompleted":{
             todoArr = todoArr.filter((todo)=>!todo.complete)
+            incompleteBtn.classList.add("bg-pink-600","text-white")
+            
+            completeBtn.classList.remove("bg-pink-600","text-white")
+            allBtn.classList.remove("bg-pink-600","text-white")
             break;
         }
         case "all":{
             todoArr 
+            incompleteBtn.classList.remove("bg-pink-600","text-white")
+            
+            completeBtn.classList.remove("bg-pink-600","text-white")
+            allBtn.classList.add("bg-pink-600","text-white")
             break;
         }
         default:{
@@ -90,6 +105,7 @@ function deleteTodo(id){
 
 
 function updateTodo(id){
+    
     const element = document.getElementById(id);
     const button = element.nextElementSibling.children[0]
     const todoArr = JSON.parse(localStorage.getItem("todos"));
@@ -100,6 +116,7 @@ function updateTodo(id){
     if(element.children[0] !== undefined || todo.complete){
         return
     }
+    // console.log("triggered");
         element.innerHTML = `<textarea name="" class="w-full border border-black p-[2px] h-full" id="">${element.innerText}</textarea>`
         button.innerHTML = `<span class="bg-blue-600 text-white p-[3px] animate-pulse text-xs rounded-sm" >Ok</span>`
     const textArea = document.querySelector(`textarea`)
@@ -118,7 +135,7 @@ function updateTodo(id){
         button.innerHTML = `<i class="fa-regular text-blue-600 fa-pen-to-square"></i>`
         button.onclick = ()=>updateTodo(id);
     })
-    
+
 }
 
 function completeTodo(id){

@@ -25,13 +25,13 @@
             <div class="absolute bottom-0 w-full  flex justify-center items-center">
                 <div id="filter-div"
                     class="absolute top-[-43px] left-[5.50%] w-[90%] border border-black right-0    flex justify-center  items-start bg-white p-2 transition-all duration-500 rounded-b-lg gap-2  z-10">
-                    <button onclick="filterTodo('complete')"
-                        class="hover:bg-pink-600  text-nowrap w-full rounded-sm p-[1px] hover:text-white">Completed</button>
-                    <button onclick="filterTodo('uncompleted')"
-                        class="hover:bg-pink-600  text-nowrap w-full rounded-sm p-[1px] hover:text-white">Uncompleted</button>
-                    <button onclick="filterTodo('all')"
+                    <button id="complete" onclick="filterTodo('complete')"
+                        class="hover:bg-pink-600  text-nowrap w-full rounded-sm p-[1px] hover:text-white">Done</button>
+                    <button id="incomplete" onclick="filterTodo('uncompleted')"
+                        class="hover:bg-pink-600  text-nowrap w-full rounded-sm p-[1px] hover:text-white">UnDone</button>
+                    <button id="all" onclick="filterTodo('all')"
                         class="hover:bg-pink-600  text-nowrap w-full rounded-sm p-[1px] hover:text-white">All
-                        todos</button>
+                    </button>
                     <button id="filter-slider"
                         class="absolute     px-[10px] text-red-200   flex flex-col justify-center items-center  rounded-b-md  bottom-[-90%]  "><i
                             class="fa-solid fa-angle-down shadow-lg font-bold text-xl  animate-pulse"></i>
