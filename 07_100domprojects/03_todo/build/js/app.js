@@ -49,11 +49,13 @@ function createTodo(text,id,itsCompleted){
 
 // whenEver something changes in todoArr update the ui 
 function updateUi(){
-    let todoArr = JSON.parse(localStorage.getItem("todos"));
-    if(!todoArr || todoArr?.length  <1){
-        return
-    }
+    let todoArr = JSON.parse(localStorage.getItem("todos")) || [];
     todoContainer.innerHTML = "";
+
+    if (todoArr.length === 0) {
+        todoContainer.innerHTML = `<p class="text-center text-black font-medium">No todos available.</p>`;
+        return;
+    }
     switch(filterValue){
         case "complete":{
             todoArr = todoArr.filter((todo)=>todo.complete)
@@ -89,16 +91,19 @@ function updateUi(){
 }
 
 function deleteTodo(id){
-    // console.log("delete triggered")
-    let todoArr = JSON.parse(localStorage.getItem("todos"));
+    console.log("delete triggered")
+    let todoArr = JSON.parse(localStorage.getItem("todos")) ||[];
     todoArr  = todoArr.filter((todo)=>todo.id !==id);
     
     //Here i got some problem when i update the todo after deleting the specific todo the todo array get reduced and the id assign to todo get's obsolete and based on that i have to change the data structure to store the todo so i change it from array to array of objects
     // let newTextArr = JSON.parse(textArr).filter((todo,index)=>{
 
     // })
-    localStorage.setItem("todos",JSON.stringify(todoArr))
-
+    if (todoArr.length === 0) {
+        localStorage.removeItem("todos"); // Clear localStorage if no todos remain
+    } else {
+        localStorage.setItem("todos", JSON.stringify(todoArr));
+    }
     updateUi();
 }
 
@@ -108,12 +113,12 @@ function updateTodo(id){
     
     const element = document.getElementById(id);
     const button = element.nextElementSibling.children[0]
-    const todoArr = JSON.parse(localStorage.getItem("todos"));
+    const todoArr = JSON.parse(localStorage.getItem("todos")) ||[];
     let text = element.innerText
     todo = todoArr.find(item=>item.id===id);
     button.onclick = null
     // console.log(button)
-    if(element.children[0] !== undefined || todo.complete){
+    if(element.children[0] !== undefined || todo.complete ||!todo){
         return
     }
     // console.log("triggered");
@@ -129,13 +134,12 @@ function updateTodo(id){
             console.log(text)
             element.textContent = text
         }else{
-
             element.textContent = textArea.value;
         }
         button.innerHTML = `<i class="fa-regular text-blue-600 fa-pen-to-square"></i>`
         button.onclick = ()=>updateTodo(id);
+        updateUi()
     })
-
 }
 
 function completeTodo(id){
