@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+
+.drop-items{
+
+    list-style-type: none;
+    border: 2px dotted black;
+
+    height: 250px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+
+
+.dropping-area{
+   
+    list-style-type: none;
+    border: 2px dotted black;
+
+    height: 250px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    
+}
+
+.empty{
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(118, 161, 255);
+}
