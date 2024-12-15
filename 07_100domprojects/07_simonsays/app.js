@@ -128,8 +128,8 @@ function startBlinking() {
       //do nothing
     }
   }
-  console.log(computerSequence);
-  console.log(colorArr[randomElem]);
+  // console.log(computerSequence);
+  // console.log(colorArr[randomElem]);
   //   console.log(document.getElementById(nextElem));
   blinking(document.getElementById(colorArr[randomElem]));
   setTimeout(() => {
@@ -166,6 +166,6 @@ boxContainer.addEventListener("click", (e) => {
     }
   }
   blinking(userClickElem);
-  console.log(userSequence);
+  // console.log(userSequence);
   checkSequences(userSequence.length - 1);
 });
