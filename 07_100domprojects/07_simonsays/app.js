@@ -21,6 +21,8 @@ const audio2 = new Audio("./audio/au_2.mp3");
 const audio3 = new Audio("./audio/au_3.mp3");
 const audio4 = new Audio("./audio/au_4.mp3");
 const audio5 = new Audio("./audio/defeat.mp3");
+const audio6 = new Audio("./audio/crazymemory.mp3");
+
 let computerSequence = [];
 let userSequence = [];
 let highestScore = 0;
@@ -44,6 +46,16 @@ function checkSequences(index) {
       if (level > Number(highestScoreElem.innerText)) {
         highestScoreElem.innerText = level;
       }
+      if (level == 10) {
+        audio6.play();
+        statusText.innerText = "Your memory is crazy master 🤯!";
+        statusText.classList.toggle("big-font");
+        setTimeout(() => {
+          statusText.innerText = "Master you are great please keep on going! ";
+          statusText.classList.toggle("big-font");
+          audio6.pause();
+        }, 8000);
+      }
       currentScoreElem.innerText = level;
     }
     return;
@@ -52,7 +64,7 @@ function checkSequences(index) {
     statusText.innerText = "You clicked on wrong color 🥲";
     audio5.play();
     setTimeout(() => {
-      statusText.innerText = "Master you are great please keep on going! ";
+      statusText.innerText = "Master you are great please keep on going!";
       statusText.classList.toggle("big-font");
       audio5.pause();
     }, 8000);
