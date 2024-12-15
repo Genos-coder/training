@@ -30,7 +30,8 @@ header h1{
     font-family: "Press Start 2P", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.5rem;
+  font-size: clamp(0.9rem,3vw,1.5rem);
+
 }
 
 
@@ -51,6 +52,7 @@ main{
     justify-content: center;
     align-items: center;
     color: white;
+    text-align: center;
 }
 
 
@@ -163,9 +165,16 @@ footer{
 
 .score-container{
     display: flex;
-    
+    flex-direction: row;
 }
 
+@media  screen and (max-width:768px) {
+    .score-container{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+}
 
 
 .score{
