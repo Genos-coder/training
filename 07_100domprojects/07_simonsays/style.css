@@ -181,6 +181,9 @@ footer{
     width: 9rem;
 }
 
+.big-font{
+    font-size: 1.25rem;
+}
 .btn:active{
     padding: 0.125rem 6px;
     border: 4px solid rgb(202, 0, 202);

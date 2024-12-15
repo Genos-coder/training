@@ -16,6 +16,11 @@ restartBtn.id = "start";
 restartBtn.classList.add("btn");
 footer.appendChild(startBtn);
 restartBtn.innerText = "Restart";
+const audio1 = new Audio("./audio/au_1.mp3");
+const audio2 = new Audio("./audio/au_2.mp3");
+const audio3 = new Audio("./audio/au_3.mp3");
+const audio4 = new Audio("./audio/au_4.mp3");
+const audio5 = new Audio("./audio/defeat.mp3");
 let computerSequence = [];
 let userSequence = [];
 let highestScore = 0;
@@ -43,10 +48,14 @@ function checkSequences(index) {
     }
     return;
   } else {
-    statusText.innerText = "You clicked on wrong color";
+    statusText.classList.toggle("big-font");
+    statusText.innerText = "You clicked on wrong color 🥲";
+    audio5.play();
     setTimeout(() => {
-      statusText.innerText = "Master you are great please keep on going!";
-    }, 5000);
+      statusText.innerText = "Master you are great please keep on going! ";
+      statusText.classList.toggle("big-font");
+      audio5.pause();
+    }, 8000);
     start = false;
     startBtn.remove();
     footer.appendChild(restartBtn);
@@ -84,7 +93,29 @@ function startBlinking() {
     userSequence = [];
   }
   let randomElem = Math.floor(Math.random() * colorArr.length);
-  computerSequence.push(colorArr[randomElem]);
+  let color = colorArr[randomElem];
+  computerSequence.push(color);
+  switch (color) {
+    case "red": {
+      audio1.play();
+      break;
+    }
+    case "yellow": {
+      audio2.play();
+      break;
+    }
+    case "green": {
+      audio3.play();
+      break;
+    }
+    case "blue": {
+      audio4.play();
+      break;
+    }
+    default: {
+      //do nothing
+    }
+  }
   console.log(computerSequence);
   console.log(colorArr[randomElem]);
   //   console.log(document.getElementById(nextElem));
@@ -97,8 +128,31 @@ boxContainer.addEventListener("click", (e) => {
   if (!e.target || !userClick || !start) {
     return;
   }
+
   let userClickElem = e.target;
-  userSequence.push(userClickElem.getAttribute("id"));
+  let id = userClickElem.getAttribute("id");
+  userSequence.push(id);
+  switch (id) {
+    case "red": {
+      audio1.play();
+      break;
+    }
+    case "yellow": {
+      audio2.play();
+      break;
+    }
+    case "green": {
+      audio3.play();
+      break;
+    }
+    case "blue": {
+      audio4.play();
+      break;
+    }
+    default: {
+      //do nothing
+    }
+  }
   blinking(userClickElem);
   console.log(userSequence);
   checkSequences(userSequence.length - 1);
