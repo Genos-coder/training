@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket Website</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3lBzzAxeGiiyPApjv54ssg28bhyXyuR5TRg&s"
+        type="image/png" height="16" width="16">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="#home">
+                <i class="fa-solid fa-dumbbell"></i> </a>
+            <span class="home_h1">
+                Royal Fitness
+            </span>
+        </h1>
+        <nav class="normal_nav">
+            <a href="#home">Home</a>
+            <a href="#choose">Why us</a>
+            <a href="#testimonial">Testimonial</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact us</a>
+        </nav>
+
+        <button id="mobile_button" class="mobile_btn effecter">
+
+            <div class="hamburger" id="toggler">
+                <span id="hamburger_insider1"></span>
+                <span id="hamburger_insider2"></span>
+                <span id="hamburger_insider3"></span>
+            </div>
+        </button>
+        <nav id="mobile_nav">
+
+            <ul>
+                <li>
+
+                    <a class="effecter" href="#home">Home</a>
+                </li>
+                <li>
+
+                    <a class="effecter" href="#choose">Why us</a>
+                </li>
+                <li>
+
+                    <a class="effecter" href="#testimonial">Testimonial</a>
+                </li>
+                <li>
+
+                    <a class="effecter" href="#pricing">Pricing</a>
+                </li>
+                <li>
+
+                    <a class="effecter" href="#contact">Contact us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <article class="rockettype">
+
+                <p>
+                    <span class="nowrap " id="auto-text">
+                        <span id="text-container"></span>
+                        <span class="cursor">|</span>
+                    </span>
+                    We are a leading fitness center. <strong class="provide">We provide state-of-the-art
+                        facilities</strong> to help you achieve your health and fitness goals, no matter your starting
+                    point.
+                </p>
+
+
+                <picture class="homerock">
+                    <img src="https://media.istockphoto.com/id/487768400/photo/handsome-power-athletic-man-turned-back.jpg?s=612x612&w=0&k=20&c=iC8OwKY7FDzh6obisvw4NDnTv0mg0ZUane6ihDyNU2Y="
+                        alt="">
+                </picture>
+
+            </article>
+        </section>
+        <hr class="afterline">
+        <section id="choose">
+            <h2 class="section_head">Why Choose Us
+
+        </section>
+        <hr class="afterline">
+
+        <section id="testimonial">
+            <h2 class="section_head">Testimonials</h2>
+
+            <figure>
+                <blockquote>
+                    <p>This gym has completely transformed my fitness journey. The trainers are highly professional, and
+                        the equipment is top-notch. I feel stronger and healthier every day!</p>
+                </blockquote>
+                <figcaption>
+                    <em>
+                        - Aryan Sharma
+                    </em>
+                </figcaption>
+            </figure>
+            <figure>
+                <blockquote>
+                    <p>Joining this gym was the best decision I ever made. The group classes are so motivating, and the
+                        community here keeps me coming back for more.</p>
+                </blockquote>
+                <figcaption>
+                    <em>
+                        - Nisha Patel
+                    </em>
+                </figcaption>
+            </figure>
+            <figure>
+                <blockquote>
+                    <p>I've been a member for over 3 years, and I love the personalized attention they give to each
+                        member. The trainers designed a workout plan that perfectly suits my goals.</p>
+                </blockquote>
+                <figcaption>
+                    <em>
+                        - Rahul Verma
+                    </em>
+                </figcaption>
+            </figure>
+        </section>
+
+        <hr class="afterline">
+        <section id="pricing">
+            <div class="pricing_small">
+                <h2 class="section_head">Pricing</h2>
+                <p class="pricing_description">We understand your fitness journey is important. Choose from our range of
+                    affordable gym memberships and start your transformation today.
+                </p>
+                <div class="card_container">
+
+                    <div class="card">
+                        <h3>Basic Membership</h3>
+
+                        <div class="infocontainer">
+
+                            <p class="price">₹1000
+                                <span class="subinfo">
+                                    per month
+                                </span>
+                            </p>
+                            <p class="rocketuse">Access to gym equipment and locker facilities.</p>
+
+                        </div>
+                        <div class="specifications">
+
+                            <p>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Gym Equipment</span>
+                            </p>
+
+                            <p><i class="fa-solid fa-circle-xmark"></i>
+                                <span>Personal Trainer</span>
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-circle-xmark"></i> <span>Group Classes</span>
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-circle-xmark"></i>
+                                <span>Free Diet Plan</span>
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-circle-xmark"></i>
+                                <span>Spa Access</span>
+                            </p>
+                        </div>
+
+                        <button>Buy now</button>
+                    </div>
+
+                    <div class="card">
+                        <h3>Premium Membership</h3>
+
+                        <div class="infocontainer">
+
+                            <p class="price">₹2000
+                                <span class="subinfo">
+                                    per month
+                                </span>
+                            </p>
+                            <p class="rocketuse">Includes personal trainer and group classes.</p>
+
+                        </div>
+                        <div class="specifications">
+
+                            <p>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Gym Equipment</span>
+                            </p>
+
+                            <p><i class="fa-solid fa-circle-check"></i>
+                                <span>Personal Trainer</span>
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-circle-check"></i> <span>Group Classes</span>
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-circle-xmark"></i>
+                                <span>Free Diet Plan</span>
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-circle-xmark"></i>
+                                <span>Spa Access</span>
+                            </p>
+                        </div>
+
+                        <button>Buy now</button>
+                    </div>
+
+                    <div class="card">
+                        <h3>Elite Membership</h3>
+
+                        <div class="infocontainer">
+
+                            <p class="price">₹3000
+                                <span class="subinfo">
+                                    per month
+                                </span>
+                            </p>
+                            <p class="rocketuse">All-inclusive access with spa and diet plan.</p>
+
+                        </div>
+                        <div class="specifications">
+
+                            <p>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Gym Equipment</span>
+                            </p>
+
+                            <p><i class="fa-solid fa-circle-check"></i>
+                                <span>Personal Trainer</span>
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-circle-check"></i> <span>Group Classes</span>
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Free Diet Plan</span>
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Spa Access</span>
+                            </p>
+                        </div>
+
+                        <button>Buy now</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <table>
+                <caption>
+                    <h2 class="section_head">Pricing</h2>
+                    <p>We understand your fitness journey is important. Choose from our range of affordable gym
+                        memberships and
+                        start your transformation today.
+                    </p>
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th class="pricehead">
+                            <p class="pricehead_description">
+                                Pick your plan; you get more benefits as you choose a bigger one. </p>
+                        </th>
+                        <th class="pricehead">
+                            <div id="greatprice" class="pricehead2">
+                                <h3 id="kid_rockets">Basic Membership</h3>
+                                <div class="pricehead_container">
+
+                                    <p class="pricehead_p_price">₹1000 </p>
+                                    <span class="pricehead_p_duration">per month</span>
+                                </div>
+                                <button id="smallbtn">Buy now</button>
+                                <div class="starup">
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <div class="starup2">
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                        </th>
+                        <th class="pricehead">
+                            <div class="pricehead2">
+                                <h3>Premium Membership</h3>
+                                <div class="pricehead_container">
+
+                                    <p class="pricehead_p_price">₹2000 </p>
+                                    <p class="pricehead_p_duration">per month</p>
+                                </div>
+                                <button>Buy now</button>
+
+                            </div>
+                        </th>
+                        <th class="pricehead">
+                            <div class="pricehead2">
+                                <h3>Elite Membership</h3>
+                                <div class="pricehead_container">
+
+                                    <p class="pricehead_p_price">₹3000</p>
+                                    <p class="pricehead_p_duration">per month</p>
+                                </div>
+                                <button>Buy now</button>
+
+                            </div>
+                        </th>
+
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>Gym Equipment</p>
+                        </td>
+                        <td>
+                            <p class="paracenter"><i class="fa-solid fa-circle-check"></i></p>
+                        </td>
+                        <td>
+                            <p class="paracenter"><i class="fa-solid fa-circle-check"></i></p>
+                        </td>
+                        <td>
+                            <p class="paracenter"><i class="fa-solid fa-circle-check"></i></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Personal Trainer</p>
+                        </td>
+                        <td>
+                            <p class="paracenter"><i class="fa-solid fa-circle-xmark"></i></p>
+                        </td>
+                        <td>
+                            <p class="paracenter"><i class="fa-solid fa-circle-check"></i></p>
+                        </td>
+                        <td>
+                            <p class="paracenter"><i class="fa-solid fa-circle-check"></i></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Group Classes</p>
+                        </td>
+                        <td>
+                            <p class="paracenter"><i class="fa-solid fa-circle-xmark"></i></p>
+                        </td>
+                        <td>
+                            <p class="paracenter"><i class="fa-solid fa-circle-check"></i></p>
+                        </td>
+                        <td>
+                            <p class="paracenter"><i class="fa-solid fa-circle-check"></i></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Free Diet Plan</p>
+                        </td>
+                        <td>
+                            <p class="paracenter"><i class="fa-solid fa-circle-xmark"></i></p>
+                        </td>
+                        <td>
+                            <p class="paracenter"><i class="fa-solid fa-circle-xmark"></i></p>
+                        </td>
+                        <td>
+                            <p class="paracenter"><i class="fa-solid fa-circle-check"></i></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Spa Access</p>
+                        </td>
+                        <td>
+                            <p class="paracenter"><i class="fa-solid fa-circle-xmark"></i></p>
+                        </td>
+                        <td>
+                            <p class="paracenter"><i class="fa-solid fa-circle-xmark"></i></p>
+                        </td>
+                        <td>
+                            <p class="paracenter"><i class="fa-solid fa-circle-check"></i></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Gym Membership</p>
+                        </td>
+                        <td>
+                            <p class="paracenter"><i class="fa-solid fa-circle-xmark"></i></p>
+                        </td>
+                        <td>
+                            <p class="paracenter"><i class="fa-solid fa-circle-check"></i></p>
+                        </td>
+                        <td>
+                            <p class="paracenter"><i class="fa-solid fa-circle-check"></i></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <hr class="afterline">
+    </main>
+    <section id="contact">
+        <h2 class="section_head">Contact Us</h2>
+        <form action="">
+
+            <label for="email">Email</label>
+            <input type="email" name="" id="email">
+            <label for="message">Message</label>
+            <textarea name="message" id="message"></textarea>
+            <button disabled>Submit</button>
+        </form>
+        <video src="https://videos.pexels.com/video-files/6053511/6053511-hd_1920_1080_25fps.mp4" loop autoplay
+            muted></video>
+
+    </section>
+    <footer>
+        <div class="footer_content">
+
+            <address>
+                <p class="nowrap">example33@gmail.com</p>
+                <p class="nowrap">+91 9920450858</p>
+                <p class="nowrap">123 Fitness Lane, Wellness City</p>
+            </address>
+            <nav>
+
+                <a href="#home">Home</a>
+                <a href="#gym">Gym Services</a>
+
+                <a href="#testimonial">Testimonial</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact us</a>
+            </nav>
+
+            <p>
+                Explore our gym facilities and services. Please read our terms and conditions before subscribing to any
+                of our plans.
+            </p>
+
+        </div>
+        <div class="copyrights">
+
+            <p>Made with passion for fitness by Royal fitness</p>
+            <p>All &copy; copyrights are reserved. Stay healthy and keep working out!</p>
+        </div>
+
+    </footer>
+
+</body>
+
+
+</html>
