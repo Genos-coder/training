@@ -84,7 +84,7 @@ function fibOfNum(n) {
   return next;
 }
 
-console.log(fibOfNum(4));
+// console.log(fibOfNum(4));
 
 //Q-6: Missing Number in an Array
 
@@ -97,7 +97,7 @@ function findNum(arr) {
   return actualSum - sum;
 }
 
-console.log(findNum([0, 1, 2, 3, 4, 6, 7]));
+// console.log(findNum([0, 1, 2, 3, 4, 6, 7]));
 
 //Q-7:count odds in the given range
 
@@ -111,7 +111,7 @@ function countOdds(low, high) {
   return count;
 }
 
-console.log(countOdds(3, 10));
+// console.log(countOdds(3, 10));
 
 // Q-8:FizzBuzz problem
 
@@ -127,4 +127,34 @@ function fizzBuzz(n) {
   }
 }
 
-fizzBuzz(15);
+// fizzBuzz(15);
+
+//Q-9:Return true if integer is power of two
+
+function isPowerOfTwo(n) {
+  if (n <= 0) {
+    return false;
+  }
+  while (n % 2 === 0) {
+    n /= 2;
+  }
+  return n === 1;
+}
+
+console.log(isPowerOfTwo(16));
+
+//Q-10: Given a non-negative integer x, return the square root of x rounded down to the nearest integer. The returned integer should be non-negative as well and You must not use any built-in exponent function or operator.
+function sqrt(x) {
+  let i = 0;
+  while (true) {
+    if (i * i === x) {
+      break;
+    } else if (i * i > x) {
+      break;
+    }
+    i++;
+  }
+  return i;
+}
+
+console.log(sqrt(20));
